@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学習一覧</title>
+</head>
+<body>
+{% for entry in object_list %}
+    <ul>
+        <li>{{entry.title}}</li>
+        <a href="{% url 'detail_entry' entry.pk %}">詳細はこちら</a>
+    </ul>
+{% endfor %}
+</body>
+</html>
