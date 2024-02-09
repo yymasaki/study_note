@@ -19,6 +19,7 @@ from .views import hello_world
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('hello/', hello_world, name='hello'),
-    path('', include('entryapp.urls'))
+    path('hello/', hello_world, name='hello'),
+    path('app/', include('entryapp.urls')),
+    path('', include('accounts.urls')),
 ]
